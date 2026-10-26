@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--link css and metadata-->
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="./styles/index.css">
+
+        <title>About Me</title>
+    </head>
+
+    <body>
+        <!--Main Navbar-->
+        <nav class="top-navbar">
+            <a href="../index.html">Home</a>
+            <a href="./resume.html">Resume</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./about_me.html">About</a>
+            <a href="./experiments.html">Experiments</a>
+            <a href="../index.html#contact">Contact Me</a>
+        </nav>
+
+        <header>
+            <h1>About Me</h1>
+        </header>
+
+        <main class="container">
+            <aside class="right-sidebar">
+                <nav>
+                    <p><b>On This Page</b></p>
+                    <ul>
+                        <li><a href="#stats">My Stats</a></li>
+                        <li><a href="#ai-policy">AI Policy</a></li>
+                        <li><a href="#story">My Story</a></li>
+                        <li><a href="#values">My Values</a></li>
+                        <li><a href="#hobbies">My Hobbies</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="container">
+                <section id="stats">
+                    <h2>My Stats</h2>
+
+                    <ul>
+                        <li>
+                            <i>4th</i> year UCSD student
+                            <br>
+                            <label for="bs-progress">B.S. of Computer Science Progress: </label>
+                            <progress id="bs-progress" max="100" value="75">75%</progress>
+                        </li>
+                        <li>Running on <i>6</i> hours of sleep</li>
+                        <li><i>2nd</i> computer science major in my family</li>
+                        <li><i>4</i> ear piercings</li>
+                        <li><i>2</i> pairs of shoes that I actually consistently wear</li>
+                    </ul>
+                </section>
+
+                <br>
+
+                <section id="ai-policy">
+                    <h2>My Views on Generative AI</h2>
+
+                    <!--Open dialog button-->
+                    <button popovertarget="tldr-dialog">T.L.D.R.</button>
+
+                    <dialog id="tldr-dialog" popover="auto" aria-labelledby="tldr-start">
+                        <p id="tldr-start">Don't use AI to write code before you know how to write it yourself!</p>
+                        <button popovertarget="tldr-dialog" popovertargetaction="hide">Close</button>
+                    </dialog>
+
+                    <p>
+                        I believe generative AI can have its uses, but it should be much more limited than the current scope of things we are using it for.
+                    </p> 
+                    <p>
+                        As a student, I understand the temptation of reaching for the quicker option to finish assignments and be able to do 
+                        literally anything else besides homework, but the reason I became a computer science major in the first place was because
+                        I like to code. I like to learn new things, try them out, struggle to make it work, then finally get the payoff of seeing the results.
+                        I don't want to be just another developer, I want to be a good one; and to make that happen I need to learn things the hard way without AI.
+                    </p>
+                    <p>
+                        There's no way to check the quality of the code AI outputs if you haven't first learned it yourself. 
+                        This is why I have decided to never use AI to write my code for me to complete assignments. 
+                        <strong>All the work you see on this website is entirely my own.</strong>
+                    </p> 
+                    <p>
+                        Now, as I said, there are some uses for AI that I do think it's worth using. Mainly, I use it for debugging. Show it the code, tell me
+                        what might have gone wrong, then research how to fix it myself and test again. 
+                    </p>
+                </section>
+
+                <br>
+
+                <section id="story">
+                    <h2>My Story</h2>
+
+                    <p>
+                        I've lived in SoCal my whole life and somehow go to the beach very rarely. 
+                        I joined my high school FRC robotics team in my freshman year, and it was there that I first learned to code in Java.
+                        My friend and I sat in the corner of the engineering classroom most of that year struggling together through the AP Java course we were given.
+                        Despite the struggle, it was the first time I realized I enjoyed coding.
+                    </p>
+                    <p>
+                        After graduating high school, I went to my local community college and finished all my general education and lower division computer science classes.
+                        After 2 years there, I transferred to UCSD, where I was unpleasantly suprised by the monster known as the quarter system.
+                        Now in my second year at UCSD, I can confidently say that it has been the most work I've done in my life, but also the most rewarding.
+                        I have learned incomparable amounts of knowledge here with hands-on work, long nights studying, and struggling through with friends.
+                    </p>
+                    <p>
+                        All the experience I have gathered has led me to become IEEE's webmaster. From the web dev experience I got last quarter from CSE 110
+                        and the WatchTower project, to immediately applying that knowledge to my team's IEEE spring quarterly project, 
+                        it has expanded my knowledge enough to give me the confidence that I can handle managing UCSD IEEE's website.
+                    </p>
+                    <p>
+                        Now I am diving deeper into web development this quarter with my classes CSE134b, Intro to Web Development, and CSE190, How the Web Works.
+                    </p>
+                </section>
+
+                <br>
+
+                <section id="values">
+                    <h2>My Values</h2>
+                    
+                    <ul>
+                        <li>Hard-working</li>
+                        <li>Passionate</li>
+                        <li>Dedicated</li>
+                        <li>Empathy first</li>
+                        <li>Open-minded</li>
+                        <li>Trust-worthiness</li>
+                    </ul>
+                </section>
+
+                <br>
+
+                <section id="hobbies">
+                    <h2>My Hobbies</h2>
+                    
+                    <ul>
+                        <li>Taking pictures of my cat</li>
+                        <li>Going on runs</li>
+                        <li>Hanging out with friends</li>
+                        <li>
+                            Reading Webtoons
+
+                            <fieldset>
+                                <legend>Have you heard of these Webtoons?</legend>
+
+                                <input type="checkbox" id="ged" name="webtoon" value="g">
+                                <label for="ged">Greatest Estate Developer</label>
+                                <br>
+
+                                <input type="checkbox" id="uo" name="webtoon" value="u">
+                                <label for="uo">UnOrdinary</label>
+                                <br>
+
+                                <input type="checkbox" id="cob" name="webtoon" value="c">
+                                <label for="cob">City of Blank</label>
+                                <br>
+
+                                <input type="checkbox" id="nsaw" name="webtoon" value="n">
+                                <label for="nsaw">Night Shift in Another World</label>
+                                <br>
+                            </fieldset>
+
+                            <br>
+
+                            <form class="webtoon-form" method="get">
+                                <label for="your-favs">What are your favorite Webtoons?</label>
+                                <br>
+                                <textarea id="your-favs" name="your-favs" rows="1" cols="30"></textarea>
+                                <input type="submit" value="Enter">
+                            </form>
+                        </li>
+                        <li>Learning Spanish</li>                    
+                        <li>
+                            Watching shows with family
+
+                            <form class="show-form" method="get">
+                                <label for="show">What should we watch next?</label>
+                                <br>
+                                <input type="text" name="show-rec" id="show" required>
+                                <input type="submit" value="Enter">
+                            </form>
+                        </li>                    
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

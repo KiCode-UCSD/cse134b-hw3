@@ -1,0 +1,370 @@
+
+:root {
+    --primary-bg: #0d1117;
+    --default-txt: white;
+
+    --link-txt: rgb(43, 176, 247);
+    --link-hover: rgba(16, 79, 113, 0.4);
+
+    --purple-border: #b517ef;
+    --dark-grey-bg: rgb(39, 38, 38);
+
+    --navbar-bg: #67078a;
+    --navbar-txt: white;
+    --navbar-shadow: 0px 8px 8px 0px rgba(201, 16, 238, 0.2), 0px 3px 5px 0px rgba(223, 201, 225, 0.2);
+    --navbar-hover: #b517ef;
+
+    --button-hover: #b517ef;
+
+    --side-nav-radius: 7px;
+
+    --fonts-1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --fonts-3: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --fonts-4: Verdana, Geneva, Tahoma, sans-serif;
+    --fonts-5: cursive;
+    --fonts-6: monospace;
+
+    --h1-size: 2.5rem;
+    --h2-size: 1.5rem;
+    --h3-size: 1.25rem;
+
+    --footer-border: rgb(69, 68, 68);
+    
+}
+
+@layer reset {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--default-txt);
+    font-family: var(--fonts-6);
+
+    :focus {
+        margin:0;
+        padding:0;
+        border-radius: 5px;
+        background-color: rgba(173, 216, 230, 50%);
+    }
+
+    a {
+        text-align: center;     /* center links horizontally */
+        padding: 5px;
+
+        /* Change styling of link itself */
+        text-decoration: none;
+        color: var(--link-txt);
+    }
+    a:hover {
+        background-color: var(--link-hover);
+        border-radius: 7px;
+    }
+
+    .top-navbar {
+        /* Set sizing of navbar */
+        width: 100vw;   /* 100% of viewport width*/
+        height: 12vh;   /* 12% of viewport height*/
+        margin-bottom: 20px;
+
+        /* Set visuals of navbar */
+        box-shadow: var(--navbar-shadow);
+        background-color: var(--navbar-bg);
+        background: var(--navbar-bg);
+
+        display: flex;              /* make contents of navbar adjust flexibly */
+        flex-flow: row nowrap;      /* specify flex for rows and content doesn't wrap around */
+        align-content: stretch;     /* stretch boxes to fix navbar container */
+        
+        /* Make navbar stick to top of page */
+        position: sticky;
+        top: 0;
+        overflow-y: auto;
+
+        
+        scroll-margin-top: 12vh;
+        scroll-padding: 100px;
+        scroll-padding-top: 12vh;
+        
+
+        /* override default link style */
+        a {
+            flex: 1 1 auto;         /* allows items to grow and shrink horizontally, basis=auto */
+            display: flexbox;       /* Makes links boxes so height adjusts automatically */
+            align-content: center;  /* centers links vertically within the container */
+
+            text-align: center;     /* center links horizontally */
+            padding: 5px;
+
+            /* Change styling of link itself */
+            text-decoration: none;
+            color: var(--default-txt);
+        }
+
+        a:hover {
+            background-color: var(--navbar-hover);
+        }
+    }
+
+    h1, h2, h3 {
+        padding: 10px 15px;
+    }
+    h1 {
+        font-size: var(--h1-size);
+    }
+    h2 {
+        font-size: var(--h2-size);
+        justify-self: center;
+    }
+    h3 {
+        font-size: var(--h3-size);
+        margin: 10px 0;
+    }
+
+    /* style page titles */
+    header {
+        margin: 15px;
+        
+        /* center title */
+        display: flex;
+        justify-self: center;
+        gap: 10px;
+    }
+
+    /* used specifically for about_me main element (to use as grid container) */
+    main[class="container"] {
+        display: grid;
+        grid-template-columns: 1fr 9fr;
+        gap: 20px;
+
+        div.container {
+            margin: 0 20px;
+        }
+    }
+
+    main {
+        margin: 15px;
+
+        /* page side navbar in about page */
+        aside {
+            /* Make navbar stick to top of page */
+            position: sticky;
+            top: 20vh;
+            
+            
+            width: auto;
+            height: fit-content;            /* makes height of container (aside) same as nav */
+
+            nav {   
+                /* Set sizing of navbar */
+                width: 18vw;                /* 18% of viewport width*/
+                max-width: 150px;
+                height: 70vh;               /* 70% of viewport height*/
+                border-radius: var(--side-nav-radius);
+
+                /* Set visuals of navbar */
+                background-color: var(--navbar-bg);
+
+                display: flex;              /* make contents of navbar adjust flexibly */
+                flex-flow: column nowrap;   /* specify flex for rows and content doesn't wrap around */
+
+                /* "On This Page title of sidenav */
+                p {
+                    flex: 0 1 auto;             /* don't allow "on this page" to grow */
+                    align-content: center;      /* center text vertically */
+
+                    text-align: center;
+
+                    height: 8vh;
+                    border: 1px solid var(--purple-border);
+                    border-radius: var(--side-nav-radius);
+                }
+                
+                ul {               
+                    padding: 0;
+                    margin: 0;
+                    
+                    text-align: center;                     /* center links horizontally */
+                    list-style: none;
+                    
+                    display: flex;
+                    flex-flow: column nowrap;
+                    flex: 1 1 auto;                         /* allow li items to grow and shrink */
+
+                    /* override default link style */
+                    li {
+                        flex: 1 1 auto;                     /* allows items to grow and shrink horizontally, basis=auto */
+
+                        padding: 0;
+                        margin: 0;
+                        border: 1px solid var(--purple-border);
+                        border-radius: var(--side-nav-radius);
+
+                        display: flex;                      /* lets clickable button dynamically size to container */
+                        flex-flow: row nowrap;
+
+                        a {
+                            align-content: center;          /* centers links vertically within the container */
+                            
+                            width: 100em;                   /* make clickable button fill entire space */           
+
+                            text-decoration: none;          /* get ride of link underline */
+                            color: var(--default-txt);
+                        }
+                        /* override default hover effect for links */
+                        a:hover {
+                            background-color: transparent;
+                        }
+                    }
+                    li:hover {
+                        background-color: var(--navbar-hover);
+                    }
+                }                
+            }
+        }
+
+        /* styling about me page sections */
+        section {
+            margin: 0 15px;
+            display: flex;
+            flex-flow: column nowrap;
+
+            scroll-margin-top: 15vh;
+
+            p {
+                line-height: 1.15rem;
+                text-align: center;
+            }
+
+            /* tldr button on about me page */
+            button {
+                align-self: center;
+
+                width: 100px;
+                margin: 10px 0;
+                padding: 8px;
+
+                background-color: var(--navbar-bg);
+                border: 6px ridge var(--purple-border);
+                border-radius: 5px;
+
+                font-family: var(--fonts-5);
+                color: var(--default-txt);
+            }
+            button:hover {
+                background-color: var(--button-hover);
+            }
+            [popover]:popover-open {
+                position-area: top center;
+
+                margin: 20px;
+                width: 300px;
+                padding: 0 10px;
+                padding-top: 20px;
+                background-color: rgb(246, 246, 32);
+                border: 5px ridge var(--purple-border);
+
+                font-family: var(--fonts-5);
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* styling for box in experiments page */
+            canvas {
+                max-height: 400px;
+                max-width: 300px;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        /* styling for projects page */
+        article {
+            background-color: var(--dark-grey-bg);
+            border: 4px ridge var(--purple-border);
+            border-radius: 10px;
+            margin: 15px;
+        }
+
+        /* styling for homepage */
+        #portfolio_intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            gap: 10px;
+
+            img {
+                width: 40vw;
+                max-width: 300px;
+                border: 6px ridge var(--purple-border);
+            }
+
+            p {
+                text-align: center;
+                max-width: 300px;
+            }
+        }
+
+        /* styling for resume page's iframe w/ resume pdg */
+        #resume {
+            width: 90vw;
+            max-height: 80vh;
+            margin: 5px 2.5vw;
+        }
+
+        /* styling for lists */
+        h3 ~ ul, h3 ~ ol, h2 ~ ul, h2 ~ ol {
+            margin: 5px 15px;
+            padding: 0 15px;
+
+            list-style-type: "- ";
+            line-height: 1.1rem;    /* increase spacing between lines */
+
+            li {
+                padding: 7px 0;
+            }
+            
+            b {
+                font-size: 1.01rem;
+            }
+        }
+    }
+
+    footer {
+        justify-self: center;
+        margin: 10px 0;
+
+        /* styling for homepage and resume footer */
+        contact_info, > span { 
+            width: 97vw;
+            
+            padding: .7em;
+            border: 2px solid;
+            border-radius: 10px;
+            border-color: var(--footer-border);
+            background-color: var(--dark-grey-bg);
+
+            /* align span elements within contact_info */
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+
+            align-items: center;    /* align text inside span for resume */
+        }
+
+        /* styling for links inside contact-info footer */
+        contact_info > span {
+            flex: 1 1 auto;
+            padding: 0.25rem;
+            text-align: center;
+        }
+    }
+}
+

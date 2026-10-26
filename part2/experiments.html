@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--link css and metadata-->
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="./styles/index.css">
+
+        <title>Experiments</title>
+    </head>
+
+    <body>
+        <!--Main Navbar-->
+        <nav class="top-navbar">
+            <a href="../index.html">Home</a>
+            <a href="./resume.html">Resume</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./about_me.html">About</a>
+            <a href="./experiments.html">Experiments</a>
+            <a href="../index.html#contact">Contact Me</a>
+        </nav>
+
+        <header>
+            <h1>Experiments</h1>
+        </header>
+
+        <main>
+            <!--INCLUDE: template* | audio | video | canvas* | source-->
+
+            <!--    VIDEO   -->
+            <section aria-label="video example">
+                <h2>Watch Calming Video</h2>
+
+                <video controls width="400" height="400">
+                    <source src="/part2/assets/calming-rain.mp4" type="video/mp4">
+                </video> 
+                <br>
+                <p>Download the <a href="/part2/assets/calming-rain.mp4">rain video</a> here.</p>
+            </section>
+
+            <br>
+
+            <!--    AUDIO   -->
+            <section aria-label="audio example">
+                <h2>Listen to Calming Rain Sounds</h2>
+
+                <audio controls loading="lazy" loop src="/part2/assets/jungle-rain-sounds.wav"></audio>
+                <br>
+                <p>Download <a href="/part2/assets/jungle-rain-sounds.wav"> audio </a> here.</p>
+            </section>
+
+            <br>
+
+            <!--    CANVAS  -->
+            <section aria-label="canvas example">
+                <h2>Canvas</h2>
+
+                <canvas width="120" height="120">
+                    Just a blue box.
+                </canvas>
+
+                <p>
+                    It's Schrodinger's box. Question is, is there a cat in there?
+                </p>
+
+                <script>
+                    const canvas = document.querySelector("canvas");
+                    const ctx = canvas.getContext("2d");
+                    ctx.fillStyle = "blue";
+                    // Add a rectangle at (10, 10) with size 100x100 pixels
+                    ctx.fillRect(10, 10, 100, 50);
+                </script>
+                <noscript>Aww no box</noscript>
+            </section>
+
+            <br>
+
+            <!--    TEMPLATE    -->
+            <section aria-label="game template example">
+                <h2>Do You Want to Play a Game?</h2>
+
+                <button onclick="showContent()">Load game content</button>
+
+                <template>
+                    <p>There might be a game here eventually...</p>                        
+                </template>
+            </section>
+        </main>
+    </body>
+</html>

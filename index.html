@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--link css and metadata-->
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="./part2/styles/index.css">
+        <script src="./part2/scripts/main.js"></script>
+
+        <title>Homepage</title>
+    </head>
+
+    <body>
+        <!--Main Navbar-->
+        <nav class="top-navbar">
+            <a href="./index.html">Home</a>
+            <a href="./part2/resume.html">Resume</a>
+            <a href="./part2/projects.html">Projects</a>
+            <a href="./part2/about_me.html">About</a>
+            <a href="./part2/experiments.html">Experiments</a>
+            <a href="./index.html#contact">Contact Me</a>
+        </nav>
+
+        <header>
+            <h1>My Homepage</h1>
+            <!--(100,10)=top (70,78) (10,78)=left (60,128) (40,198)=bot left      	 
+                (100,158) (160,198)=bot right (140,128) (190,78)=right (130,78)-->
+            <svg width="50" height="50" viewBox="0 0 200 200" fill="none" aria-hidden>
+                <polygon points="100,10 70,78 10,78 60,128 40,198 100,158 160,198 140,128 190,78 130,78"
+                style="fill:rgb(215, 226, 16); stroke:rgb(187, 196, 10);stroke-width:5;" />
+            </svg>
+
+            <hello_world></hello_world>
+        </header>
+
+        <main>
+            <h2>Welcome to My Portfolio Site!</h2>
+
+            <section id="portfolio_intro">
+                <picture>
+                    <!--set image to higher resolution if possible, fall back to webp-->
+                    <source srcset="./part2/assets/portrait.webp, part2/assets/portrait.JPG 2x">
+                    <img src="./part2/assets/portrait.webp" width="300" alt="Professional picture of me">
+                </picture>
+
+                <p>
+                    I see you've made your way to my little corner of the internet. If you want to know more about me, feel free to roam about!
+                </p>
+            </section>
+        </main>
+        <footer>
+            <h2 id="contact">Contact me:</h2>
+
+            <contact_info>
+                <span>My <a href="mailto:r8diaz@ucsd.edu">school email</a></span>
+                <span>My <a href="mailto:ki.diaz.2005@gmail.com">personal email</a></span>
+                <span>My <a href="https://www.linkedin.com/in/ki-diaz-7408ba369?trk=people-guest_people_search-card"> LinkedIn page</a></span>
+            </contact_info>
+        </footer>
+    </body> 
+</html>

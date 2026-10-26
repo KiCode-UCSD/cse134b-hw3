@@ -1,0 +1,56 @@
+/*
+    Name: Ki Diaz
+    Repo: https://github.com/KiCode-UCSD/cse134b-hw3
+*/
+
+html {
+    max-width: max-content;
+    margin: auto;
+    padding: 0.5rem;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(88, 89, 6);
+    line-height: normal;
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .latin {
+        font-style: italic;
+    }
+
+    #warning {
+        background-color: rgb(181, 18, 18);
+        color: white;
+        line-height: 1.5rem;
+    }
+
+    blockquote {
+        border: 5px ridge black;
+        padding: 0.75rem 0.5rem;
+        text-align: center;
+        margin: 1.5rem 1rem;    /* (top&bottom) (left&right) */
+    }
+
+    a:hover {
+        background-color: lightblue;
+    }
+
+    a:focus, button:focus, input:focus {
+        background-color: yellow;
+        outline: 4px outset rgb(195, 190, 48); 
+    }
+
+    /*  This one wins because it has the same specificity, 
+        but comes after the first a:focus, so it overrides it */
+    a:focus {
+        outline: 4px outset rgb(105, 94, 221);
+    }
+}
